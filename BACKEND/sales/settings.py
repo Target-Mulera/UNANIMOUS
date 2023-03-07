@@ -119,3 +119,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+STATICFILES_DIRS = [Path(BASE_DIR, 'static')]
+STATIC_ROOT = Path(BASE_DIR, 'staticfiles')
+
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder", 
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
+]
